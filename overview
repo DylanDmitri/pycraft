@@ -1,0 +1,75 @@
+RULES
+
+hull (3 ore; 5 production)
+ has five empty slots
+ +5 HP
+
+generator (1 ore; 10 production)
+ +1 energy per turn
+
+maker (1 ore; 10 production)
+ -1 energy, +1 production
+
+laser (1 ore; 5 production)
+ -5 energy to fire; may fire every 5 turns
+ 321 damage in 123 range
+
+battery (1 ore; 3 production)
+ holds 25 energy
+
+miner (1 ore; 3 production)
+ -1 energy, add .2 to extraction count
+
+mover (1 ore; 3 production)
+ -.5 energy, add .2 to move count
+
+
+robots may be repaired at 1 HP per production
+dead robots turn into ore (1/2 build cost)
+
+ore and parts can be handled separately
+  put in an adjacent tile or cargo slot (1 energy)
+	5 ore/parts per tile (hulls count as 3 ore)
+  pick up ore or part in same tile (1 energy)
+  install component in an empty hull (1 production)
+  uninstall component from hull (1 production)
+
+energy can be transferred between neighboring units (5 max transfer/turn)
+
+TURN CYCLE:
+  generators make power
+  all AIs process
+  energy is transferred between units
+  ore and parts are picked up / moved
+  movers activate
+  lasers activate
+  miners activate
+
+
+
+
+worker (6 ore, 16 production)
+ generator
+ miner
+ mover
+ [  ]
+ [  ]
+
+move one space in 5 turns; mine one ore in 5 turns; store up to 2 ore
+
+
+scout 		fast transport
+ generator	generator
+ battery	mover
+ mover		mover
+ mover		[  ]
+ mover		[  ]
+
+.6 spaces per turn for 42 turns = 25 spaces
+
+
+
+
+
+
+STANDARD MAP = 50x50
